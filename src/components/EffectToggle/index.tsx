@@ -16,7 +16,6 @@ const EffectToggle: FC<EffectToggleProps> = ({
     >
       <span className="effect-toggle__text">
         <span className="effect-toggle__name">{name}</span>
-        <span className="effect-toggle__state">{effect ? 'On' : 'Off'}</span>
       </span>
       <span className="effect-toggle__switch" aria-hidden="true">
         <span className="effect-toggle__thumb" />

@@ -370,17 +370,11 @@ function App() {
       <section className="synth-panel" aria-label="Browser synthesizer">
         <header className="hero">
           <div>
-            <p className="eyebrow">Browser instrument</p>
             <h1>Synthesizer</h1>
-            <p className="hero-copy">
-              A compact playable synth with live effects, touch-friendly keys,
-              and a cleaner studio-style control surface.
-            </p>
           </div>
           <div className="status-card" aria-live="polite">
             <span className={`status-dot${audioReady ? ' is-live' : ''}`} aria-hidden="true" />
             <div>
-              <p className="status-label">Engine</p>
               <p className="status-value">{audioReady ? 'Ready' : 'Standby'}</p>
             </div>
             <p className="status-copy">{statusMessage}</p>
@@ -389,10 +383,6 @@ function App() {
 
         <section className="control-grid">
           <div className="control-card control-card--primary">
-            <div className="control-heading">
-              <p className="section-label">Instrument</p>
-              <span className="section-meta">Live switch</span>
-            </div>
             <Select
               label="Choose instrument"
               value={instrument}
@@ -410,9 +400,7 @@ function App() {
             />
           </div>
 
-          <fieldset className="control-card">
-            <legend className="section-label">Effects</legend>
-            <p className="effects-copy">Keep it sparse or stack a dense chain. Every toggle updates the same audio graph.</p>
+          <fieldset className="control-card" aria-label="Effects">
             <div className="toggles">
               {effectLabels.map(({ id, label }) => (
                 <EffectToggle
@@ -428,12 +416,6 @@ function App() {
 
         <section className="keyboard-section">
           <div className="keyboard-header">
-            <div>
-              <p className="section-label">Keyboard</p>
-              <p className="keyboard-copy">
-                Play with mouse, touch, or computer keys. `A` through `;` covers the visible range, and arrows shift octaves.
-              </p>
-            </div>
             <div className="keyboard-meta">
               <span>Current octave</span>
               <strong>{octave}</strong>

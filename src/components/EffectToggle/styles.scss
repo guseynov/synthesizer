@@ -32,9 +32,8 @@
 }
 
 .effect-toggle__text {
-  display: grid;
-  gap: 3px;
-  justify-items: start;
+  display: flex;
+  align-items: center;
   text-align: left;
 }
 
@@ -70,9 +69,4 @@
   font-size: 0.95rem;
   font-weight: 600;
   color: #f0f3f7;
-}
-
-.effect-toggle__state {
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.52);
 }

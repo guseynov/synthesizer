@@ -24,7 +24,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
   gap: 18px;
-  align-items: start;
+  align-items: center;
 
   h1 {
     margin: 0;
@@ -37,30 +37,12 @@
   }
 }
 
-.eyebrow,
-.section-label,
-.status-label {
-  margin: 0 0 8px;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: rgba(255, 255, 255, 0.58);
-}
-
-.hero-copy,
-.effects-copy,
-.keyboard-copy,
 .status-copy {
   margin: 0;
   max-width: 44rem;
   color: #a6a6a6;
   line-height: 1.45;
   font-size: 1rem;
-}
-
-.hero-copy {
-  position: relative;
-  z-index: 1;
 }
 
 .status-card,
@@ -78,7 +60,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px 12px;
-  align-content: start;
+  align-content: center;
   min-height: 0;
 }
 
@@ -124,19 +106,6 @@
   }
 }
 
-.control-heading,
-.keyboard-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: start;
-}
-
-.section-meta {
-  color: #0099ff;
-  font-size: 0.85rem;
-}
-
 .toggles {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -147,6 +116,11 @@
 .keyboard-section {
   display: grid;
   gap: 14px;
+}
+
+.keyboard-header {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .keyboard-meta {
